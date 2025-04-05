@@ -17,7 +17,7 @@ def get_latest_commit_sha(repo, branch='main'):
     sys.exit(1)
 
 def get_pdf_url(latest_commit_hash: str) -> str:
-    return f"https://raw.githubusercontent.com/jthaller/resume_url_hosting/{latest_commit_hash}/menu.pdf"
+    return f"https://raw.githubusercontent.com/jthaller/cocktail_menu/{latest_commit_hash}/menu.pdf"
 
 
 if __name__ == "__main__":
