@@ -2,7 +2,7 @@ name: Build and Deploy LaTeX PDF
 
 # Triggers on push, pull_request, or manual dispatch.
 # Installs LaTeX (minimal but enough for most use-cases).
-# Compiles main.tex using latexmk, which handles multiple passes.
+# Compiles menu.tex using latexmk, which handles multiple passes.
 # Moves the PDF into an output/ directory.
 # Uploads and deploys that folder to GitHub Pages.
 
@@ -33,7 +33,7 @@ jobs:
 
       - name: Compile LaTeX to PDF
         run: |
-          latexmk -pdf main.tex
+          latexmk -pdf menu.tex
           mkdir output
           mv main.pdf output/
 
