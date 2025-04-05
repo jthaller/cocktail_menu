@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{microtype}
+
+% Font settings – adjust to your preference
+\setmainfont{EB Garamond} % classic & elegant
+\setsansfont{Futura} % clean, minimal
+\newfontfamily\headingfont{Futura}
+
+% Section style
+\titleformat{\section}
+  {\headingfont\Large\bfseries\filcenter}
+  {}{0em}{}
+
+% No page number
+\pagestyle{empty}
+
+% Custom command for cocktails
+\newcommand{\cocktail}[2]{
+  \textbf{\large #1} \\ 
+  \small\textit{#2} \vspace{1em} \\
+}
+
+\begin{document}
+\begin{center}
+    {\headingfont\LARGE Upsala Bar Menu}\\
+    \vspace{0.5em}
+    \rule{0.2\textwidth}{0.4pt}
+\end{center}
+
+\vspace{2em}
+
+\cocktail{The High Five}{Gin, Aperol, Grapefruit, Lime}
+
+\cocktail{The Paper Airplane}{Lemon Juice, Bourbon, Amaro Nonino, Aperol}
+
+\cocktail{Clarified Tequila Milk Punch}{Tequila, Lime Juice, Curaçao, Orange Bitters, Whole Milk}
+
+\cocktail{Soju Spritz}{Flavored Soju, Lemon, Prosecco}
+
+\cocktail{Blood Jellyfish}{Campari, Cointreau, Gin, Baileys Drop}
+
+\cocktail{Crème Brûlée Whiskey Sour}{Whiskey, Lemon, Sugar, Egg, Baileys}
+
+\cocktail{Empress White Lady}{Indigo Gin, Orange Liqueur, Lemon, Egg White}
+
+\vfill
+
+\begin{center}
+    {\small\itshape Crafted with precision and quiet flair}
+\end{center}
+
+\end{document}
