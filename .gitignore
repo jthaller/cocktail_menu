@@ -1,5 +1,6 @@
 # custom
-menu.pdf
+*.pdf
+*.png
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
