@@ -35,7 +35,20 @@
 \fancyhf{} % Clear all headers and footers
 \fancyfoot[C]{\the\year-\the\month-\the\day\ \textbar\ Last build: \today} % Footer with the last build date
 
+
+\usepackage{graphicx}
+\usepackage{background}
+
+% Background image setup
+\backgroundsetup{
+  scale=1,
+  angle=0,
+  opacity=0.15,
+  contents={\includegraphics[width=\paperwidth,height=\paperheight]{chairs.pdf}}
+}
+
 \begin{document}
+\BgThispage
 
 \title{\textsc{Le jardin Carlton}}
 \date{}
