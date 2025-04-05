@@ -31,6 +31,20 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra latexmk
 
+      - name: Install EB Garamond and IBM Plex Mono fonts
+        run: |
+          # Install EB Garamond
+          mkdir -p ~/.fonts
+          wget https://github.com/georgd/eb-garamond/releases/download/v2.0/EBGaramond-2.0.zip -O /tmp/EBGaramond.zip
+          unzip /tmp/EBGaramond.zip -d ~/.fonts/
+          
+          # Install IBM Plex Mono
+          wget https://github.com/IBM/plex/releases/download/v5.0.0/IBM-Plex-Mono.zip -O /tmp/IBM-Plex-Mono.zip
+          unzip /tmp/IBM-Plex-Mono.zip -d ~/.fonts/
+
+          # Update the font cache
+          fc-cache -fv
+
       - name: Compile LaTeX to PDF
         run: |
           latexmk -lualatex menu.tex
