@@ -33,7 +33,7 @@ jobs:
 
       - name: Compile LaTeX to PDF
         run: |
-          latexmk -xelatex menu.tex
+          latexmk -lualatex menu.tex
           mkdir output
           mv main.pdf output/
 
