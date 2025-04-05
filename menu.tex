@@ -1,58 +1,68 @@
 \documentclass[12pt]{article}
+\author{Cocktails}
+
+% Use geometry for clean margins
 \usepackage[margin=1in]{geometry}
+
+% Use fontspec to load custom fonts (LuaLaTeX or XeLaTeX)
 \usepackage{fontspec}
-\usepackage{setspace}
-\usepackage{titlesec}
+
+% Set fonts
+\setmainfont{EB Garamond} % Title font – elegant and timeless
+\newfontfamily\monofont{IBM Plex Mono}[RawFeature={+zero}]
+
+% No indent, clean paragraph spacing
 \usepackage{parskip}
-\usepackage{graphicx}
-\usepackage{microtype}
+\setlength{\parindent}{0pt}
 
-% Font settings – adjust to your preference
-\setmainfont{EB Garamond} % classic & elegant
-\setsansfont{Futura} % clean, minimal
-\newfontfamily\headingfont{Futura}
+% Center title nicely
+\usepackage{titling}
+\pretitle{\begin{center}\Huge}
+\posttitle{\end{center}\vskip 0.8em}
 
-% Section style
-\titleformat{\section}
-  {\headingfont\Large\bfseries\filcenter}
-  {}{0em}{}
+% Slightly tighter line spacing
+\linespread{1.15}
 
-% No page number
-\pagestyle{empty}
+% Remove page numbers
+\pagenumbering{gobble}
 
-% Custom command for cocktails
-\newcommand{\cocktail}[2]{
-  \textbf{\large #1} \\ 
-  \small\textit{#2} \vspace{1em} \\
-}
+% Optional: small caps for labels
+\usepackage[small]{titlesec}
+
+% Fancy header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % Clear all headers and footers
+\fancyfoot[C]{\the\year-\the\month-\the\day\ \textbar\ Last build: \today} % Footer with the last build date
 
 \begin{document}
-\begin{center}
-    {\headingfont\LARGE Upsala Bar Menu}\\
-    \vspace{0.5em}
-    \rule{0.2\textwidth}{0.4pt}
-\end{center}
 
-\vspace{2em}
+\title{\textsc{Le jardin Carlton}}
+\date{}
+\maketitle
 
-\cocktail{The High Five}{Gin, Aperol, Grapefruit, Lime}
+\vspace{0.8cm}
 
-\cocktail{The Paper Airplane}{Lemon Juice, Bourbon, Amaro Nonino, Aperol}
+% Menu items
+\textsf{\textbf{The High Five}} \\
+{\monofont Gin, Aperol, Grapefruit, Lime} \\[1em]
 
-\cocktail{Clarified Tequila Milk Punch}{Tequila, Lime Juice, Curaçao, Orange Bitters, Whole Milk}
+\textsf{\textbf{Paper Airplane}} \\
+{\monofont Bourbon, Amaro Nonino, Aperol, Lemon Juice} \\[1em]
 
-\cocktail{Soju Spritz}{Flavored Soju, Lemon, Prosecco}
+\textsf{\textbf{Clarified Tequila}} \\
+{\monofont Tequila, Lime Juice, Curaçao, Orange Bitters, Whole Milk (clarified)} \\[1em]
 
-\cocktail{Blood Jellyfish}{Campari, Cointreau, Gin, Baileys Drop}
+\textsf{\textbf{Soju Spritz}} \\
+{\monofont Flavored Soju, Lemon, Prosecco} \\[1em]
 
-\cocktail{Crème Brûlée Whiskey Sour}{Whiskey, Lemon, Sugar, Egg, Baileys}
+\textsf{\textbf{Blood Jellyfish}} \\
+{\monofont Campari, Cointreau, Gin, Baileys Drop} \\[1em]
 
-\cocktail{Empress White Lady}{Indigo Gin, Orange Liqueur, Lemon, Egg White}
+\textsf{\textbf{Crème Brûlée Whiskey Sour}} \\
+{\monofont Whiskey, Lemon, Sugar, Egg, Baileys} \\[1em]
 
-\vfill
-
-\begin{center}
-    {\small\itshape Crafted with precision and quiet flair}
-\end{center}
+\textsf{\textbf{Empress White Lady}} \\
+{\monofont Indigo Gin, Orange Liqueur, Lemon, Egg White}
 
 \end{document}
