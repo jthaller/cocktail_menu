@@ -1,45 +1,29 @@
 \documentclass[12pt]{article}
-\author{Specialty Cocktails of the Day}
+\author{Evening Cocktails}
 
-% Use geometry for clean margins
 \usepackage[margin=1in]{geometry}
-
-% Use fontspec to load custom fonts (LuaLaTeX or XeLaTeX)
 \usepackage{fontspec}
-
-% Set fonts
-\setmainfont{EB Garamond} % Title font – elegant and timeless
+\setmainfont{EB Garamond}
 \newfontfamily\monofont{IBM Plex Mono}[RawFeature={+zero}]
 
-% No indent, clean paragraph spacing
 \usepackage{parskip}
 \setlength{\parindent}{0pt}
 
-% Center title nicely
 \usepackage{titling}
 \pretitle{\begin{center}\Huge}
 \posttitle{\end{center}\vskip 0.8em}
 
-% Slightly tighter line spacing
 \linespread{1.15}
-
-% Remove page numbers
 \pagenumbering{gobble}
-
-% Optional: small caps for labels
 \usepackage[small]{titlesec}
 
-% Fancy header and footer
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\fancyhf{} % Clear all headers and footers
-\fancyfoot[C]{\the\year-\the\month-\the\day\ \textbar\ Last build: \today} % Footer with the last build date
-
+\fancyhf{}
+\fancyfoot[C]{\the\year-\the\month-\the\day\ \textbar\ Last build: \today}
 
 \usepackage{graphicx}
 \usepackage{background}
-
-% Background image setup
 \backgroundsetup{
   scale=1,
   angle=0,
@@ -54,28 +38,65 @@
 \date{}
 \maketitle
 
-\vspace{0.8cm}
+\vspace{1.2cm}
 
-% Menu items
-\textsf{\textbf{The High Five}} \\
-{\monofont Gin, Aperol, Grapefruit, Lime} \\[1em]
+\begin{center}
+{\Large \textsc{The High Five}} \\
+\vspace{0.2em}
+{\monofont Gin \textperiodcentered\ Aperol \textperiodcentered\ Grapefruit \textperiodcentered\ Lime}
+\end{center}
 
-\textsf{\textbf{Paper Airplane}} \\
-{\monofont Bourbon, Campari, Aperol, Lemon Juice} \\[1em]
+\vspace{1.2cm}
 
-\textsf{\textbf{Clarified Tequila}} \\
-{\monofont Tequila, Lime Juice, Blue Curaçao, Orange Bitters, Whole Milk (clarified)} \\[1em]
+\begin{center}
+{\Large \textsc{Empress White Lady}} \\
+\vspace{0.2em}
+{\monofont Indigo Gin \textperiodcentered\ Orange Liqueur \textperiodcentered\ Lemon \textperiodcentered\ Vegan Egg White}
+\end{center}
 
-\textsf{\textbf{Soju Spritz}} \\
-{\monofont Flavored Soju, Lemon, Prosecco} \\[1em]
+\vspace{1.2cm}
 
-% \textsf{\textbf{Blood Jellyfish}} \\
-% {\monofont Campari, Cointreau, Gin, Baileys Drop} \\[1em]
+\begin{center}
+{\Large \textsc{Paper Airplane}} \\
+\vspace{0.2em}
+{\monofont Bourbon \textperiodcentered\ Campari \textperiodcentered\ Aperol \textperiodcentered\ Lemon}
+\end{center}
 
-\textsf{\textbf{Crème Brûlée Whiskey Sour}} \\
-{\monofont Whiskey, Lemon, Sugar, Whole Egg, Baileys} \\[1em]
+\vspace{1.2cm}
 
-\textsf{\textbf{Empress White Lady}} \\
-{\monofont Indigo Gin, Orange Liqueur, Lemon, Egg White Substitute}
+\begin{center}
+{\Large \textsc{Mandarin Bourbon Smash}} \\
+\vspace{0.2em}
+{\monofont Mandarin Orange \textperiodcentered\ Lemon \textperiodcentered\ Aperol \textperiodcentered\ Bourbon}
+\end{center}
+
+\vspace{1.2cm}
+
+\begin{center}
+{\Large \textsc{Crème Brûlée Whiskey Sour}} \\
+\vspace{0.2em}
+{\monofont Whiskey \textperiodcentered\ Lemon \textperiodcentered\ Sugar \textperiodcentered\ Whole Egg \textperiodcentered\ Baileys}
+\end{center}
+
+\vspace{1.2cm}
+
+\begin{center}
+{\Large \textsc{Soju Spritz}} \\
+\vspace{0.2em}
+{\monofont Flavored Soju \textperiodcentered\ Lemon \textperiodcentered\ Prosecco}
+\end{center}
 
 \end{document}
+
+% \begin{center}
+%   {\Large \textsc{Clarified Tequila}} \\
+%   \vspace{0.2em}
+%   {\monofont Tequila \textperiodcentered\ Lime \textperiodcentered\ Blue Curaçao \textperiodcentered Orange Bitters \textperiodcentered Whole Milk (clarified)} }
+%   \end{center}
+
+% \begin{center}
+%   {\Large \textsc{Blood Jellyfish}} \\
+%   \vspace{0.2em}
+%   {\monofont Campari \textperiodcentered\ Cointreau \textperiodcentered\ Gin \textperiodcentered Baileys Drop}
+%   \end{center}
+
